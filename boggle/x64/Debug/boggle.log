@@ -1,0 +1,10 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  GameObject.cpp
+  GameState.cpp
+  Level.cpp
+C:\Users\melin\OneDrive\Documents\GitHub\boggle\boggle\Level.cpp(5,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\melin\OneDrive\Documents\GitHub\boggle\boggle\Level.cpp(6,11): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Level1.cpp
+  main.cpp
+  Generating Code...
+  boggle.vcxproj -> C:\Users\melin\OneDrive\Documents\GitHub\boggle\bin\boggle.exe
