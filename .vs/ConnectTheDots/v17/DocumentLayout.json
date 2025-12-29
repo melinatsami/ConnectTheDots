@@ -1,12 +1,117 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\melin\\OneDrive\\Desktop\\ConnectTheDots\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\GlobalState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\GameObject.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\GameObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F66B610B-D040-4AC7-8EE9-35889AD77C11}|ConnectTheDots\\ConnectTheDots.vcxproj|solutionrelative:ConnectTheDots\\GlobalState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\main.cpp",
+              "RelativeDocumentMoniker": "ConnectTheDots\\main.cpp",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\main.cpp",
+              "RelativeToolTip": "ConnectTheDots\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-29T15:56:07.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Level.cpp",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\Level.cpp",
+              "RelativeDocumentMoniker": "ConnectTheDots\\Level.cpp",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\Level.cpp",
+              "RelativeToolTip": "ConnectTheDots\\Level.cpp",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-29T15:55:47.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameObject.cpp",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.cpp",
+              "RelativeDocumentMoniker": "ConnectTheDots\\GameObject.cpp",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.cpp",
+              "RelativeToolTip": "ConnectTheDots\\GameObject.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-29T15:55:26.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameObject.h",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.h",
+              "RelativeDocumentMoniker": "ConnectTheDots\\GameObject.h",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GameObject.h",
+              "RelativeToolTip": "ConnectTheDots\\GameObject.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-29T15:54:32.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GlobalState.cpp",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.cpp",
+              "RelativeDocumentMoniker": "ConnectTheDots\\GlobalState.cpp",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.cpp",
+              "RelativeToolTip": "ConnectTheDots\\GlobalState.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-29T15:52:58.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalState.h",
+              "DocumentMoniker": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.h",
+              "RelativeDocumentMoniker": "ConnectTheDots\\GlobalState.h",
+              "ToolTip": "C:\\Users\\melin\\OneDrive\\Documents\\GitHub\\ConnectTheDots\\ConnectTheDots\\GlobalState.h",
+              "RelativeToolTip": "ConnectTheDots\\GlobalState.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-12-29T15:52:12.452Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

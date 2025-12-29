@@ -1,5 +1,5 @@
 #include "Level.h"
-#include "GameState.h"
+#include "GlobalState.h"
 #include "Dot.h"
 void Level::update(float dt)
 {

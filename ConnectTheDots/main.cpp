@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include "util.h"
 #include <string>
-#include "GameState.h"
+#include "GlobalState.h"
 
 
 void init() {
-	GameState::getInstance()->init();
+	GlobalState::getInstance()->init();
 }
 
 void draw() { //dhmiourgei ta koutakia
-	GameState::getInstance()->draw();
+	GlobalState::getInstance()->draw();
 }
 
 void update(float dt) { //kouniete to player
-	GameState::getInstance()->update(dt);
+	GlobalState::getInstance()->update(dt);
 }
 
 int main(int argc, char** argv) {
@@ -26,8 +26,8 @@ int main(int argc, char** argv) {
 	graphics::setDrawFunction(draw);
 	graphics::setUpdateFunction(update);
 
-	graphics::setCanvasSize(GameState::getInstance()->getCanvasWidth(), 
-		GameState::getInstance()->getCanvasHeight());
+	graphics::setCanvasSize(GlobalState::getInstance()->getCanvasWidth(),
+		GlobalState::getInstance()->getCanvasHeight());
 	graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
 
 	graphics::startMessageLoop();

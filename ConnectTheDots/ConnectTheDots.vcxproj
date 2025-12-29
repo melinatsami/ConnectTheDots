@@ -137,7 +137,7 @@
   <ItemGroup>
     <ClInclude Include="Dot.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GameState.h" />
+    <ClInclude Include="GlobalState.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Level1.h" />
     <ClInclude Include="Level2.h" />
@@ -147,7 +147,7 @@
   <ItemGroup>
     <ClCompile Include="Dot.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="GlobalState.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Level1.cpp" />
     <ClCompile Include="Level2.cpp" />
