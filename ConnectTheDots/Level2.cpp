@@ -1,7 +1,4 @@
-#include "Level.h"
-class Level2 : public Level {
-public:
-    void init() override {
-
-    }
-};
+#include "Level2.h"
+void Level2::init() {
+    
+}

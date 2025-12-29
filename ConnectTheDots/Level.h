@@ -3,13 +3,13 @@
 #include <sgg/graphics.h>
 #include <list>
 #include "util.h"
+#include "Dot.h"
 class Level :public GameObject 
 {
 protected:
 	graphics::Brush m_brush;
-	graphics::MouseState mouse;
 
-	const float dot_radius = 10.0f;
+	const float dot_radius = 15.0f;
 	struct Edge {
 		int from;
 		int to;
@@ -23,6 +23,6 @@ public:
 	void update(float dt) override;
 	void init() override;
 	void draw() override;
-	Level(const std::string& name = "level0");
+	Level(const std::string& name = "Level");
 	~Level();
 };

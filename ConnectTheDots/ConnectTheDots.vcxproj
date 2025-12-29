@@ -145,7 +145,6 @@
     <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Dot.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GlobalState.cpp" />
     <ClCompile Include="Level.cpp" />

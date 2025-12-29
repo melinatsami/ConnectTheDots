@@ -1,5 +1,9 @@
 #include "GlobalState.h"
 #include "Level.h"
+#include "Level1.h"
+#include "Level2.h"
+#include "Level3.h"
+
 
 GlobalState::GlobalState()
 {
@@ -7,7 +11,8 @@ GlobalState::GlobalState()
 
 void GlobalState::init()
 {
-	m_current_level = new Level();
+	m_level_count = 1; //handles level 1 
+	m_current_level = new Level1();
 	m_current_level->init();
 
 	graphics::preloadBitmaps(getAssetDir());
@@ -27,6 +32,29 @@ void GlobalState::update(float dt)
 	if (!m_current_level)
 		return;
 	m_current_level->update(dt);
+}
+
+void GlobalState::nextLevel() {
+	m_level_count++; // tracks which level we are on 
+
+	if (m_current_level) {
+		delete m_current_level;
+		m_current_level = nullptr;
+	}
+
+	if (m_level_count == 1) {
+		m_current_level = new Level1();
+	}
+	else if (m_level_count == 2) {
+		m_current_level = new Level2();
+	}
+	else if(m_level_count == 3){
+		m_current_level = new Level3();
+	}
+
+	if (m_current_level) {
+		m_current_level->init();
+	}
 }
 
 GlobalState* GlobalState::getInstance()

@@ -1,9 +1,6 @@
 #pragma once
-#include <vector>
-struct Dot {
+struct Dot { //each dot is a node
 		float x, y;
 		int graph_id;
-	
-	int dot_radius;
 };
 

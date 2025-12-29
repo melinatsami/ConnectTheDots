@@ -7,20 +7,21 @@ class GlobalState
 private:
 	std::string m_asset_path = "assets\\";
 
-	float m_canvas_width = 4.0f;
-	float m_canvas_height = 4.0f;
+	float m_canvas_width = 800.0f;
+	float m_canvas_height = 800.0f;
 
 	static GlobalState* m_unique_instance;
 
 	GlobalState();
 
 	class Level* m_current_level = 0;
+	int m_level_count = 0;
 
 public:
 	void init();
 	void draw();
 	void update(float dt);
-
+	void nextLevel();
 	static GlobalState* getInstance();
 	~GlobalState();
 
