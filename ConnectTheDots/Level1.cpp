@@ -3,8 +3,8 @@ void Level1:: init(){
         m_dots.clear();
         m_edges.clear(); //clear existing data
 
-        int rows = 5;
-        int cols = 5;
+        int rows = 3;
+        int cols = 3;
 
         float spacing = 150.0f; // distance between dots
         float offsetX = 100.0f;
@@ -15,7 +15,7 @@ void Level1:: init(){
                 Dot d;
                 d.x = offsetX + (j * spacing);
                 d.y = offsetY + (i * spacing);
-                if ((j == 4) || (i==0) || (i==4)){
+                if ((j == 2) || (i==0) || (i==2)){
                     d.graph_id = 0;
                 }
                 else {

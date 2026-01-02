@@ -2,7 +2,6 @@
 #include "GlobalState.h"
 void Level::update(float dt)
 {
-	bool completed = false;
 	graphics::MouseState mouse;
 	graphics::getMouseState(mouse);
 	int mx = mouse.cur_pos_x;
@@ -52,11 +51,36 @@ void Level::update(float dt)
 		}
 		m_selected_dot = -1; //reset
 		m_hover_dot = -1;
-		if (m_edges.size() == m_dots.size() + 1) {
-			completed = true;
+	} if (!completed) {
+		if (m_edges.empty()) {
+			completed = false;
 		}
-	} 
-	
+		else {
+			completed = true;
+			for (int i = 0; i < m_dots.size(); i++)
+			{
+				bool connected = false; //checks if each dot is connected
+				for (auto& e : m_edges)
+				{
+					if (e.from == i || e.to == i)
+					{
+						connected = true;
+						break; // this dot is connected
+					}
+				}
+				if (!connected) {
+					printf("completed is false");
+					completed = false;
+					break; //dot isnt connected
+				}
+			}
+		}
+	}
+	if (completed) {
+		printf("ALL DOTS CONNECTED! Switching...\n");
+		GlobalState::getInstance()->nextLevel();
+		return;
+	}
 	GameObject::update(dt);
 }
 

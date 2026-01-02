@@ -1,10 +1,11 @@
 #include "Level2.h"
 void Level2::init() {
+    completed = false; // Reset for the new level
     m_dots.clear();
     m_edges.clear(); //clear existing data
 
-    int rows = 8;
-    int cols = 8;
+    int rows = 6;
+    int cols = 6;
 
     float spacing = 100.0f; // distance between dots
     float offsetX = 100.0f;

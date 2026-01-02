@@ -16,7 +16,7 @@ private:
 
 	class Level* m_current_level = 0;
 	int m_level_count = 0;
-
+	
 public:
 	void init();
 	void draw();

@@ -35,7 +35,8 @@ void GlobalState::update(float dt)
 }
 
 void GlobalState::nextLevel() {
-	m_level_count++; // tracks which level we are on 
+	
+	m_level_count++;
 
 	if (m_current_level) {
 		delete m_current_level;
@@ -43,7 +44,7 @@ void GlobalState::nextLevel() {
 	}
 
 	if (m_level_count == 1) {
-		m_current_level = new Level1();
+		m_current_level = new Level1(); 
 	}
 	else if (m_level_count == 2) {
 		m_current_level = new Level2();
@@ -51,6 +52,7 @@ void GlobalState::nextLevel() {
 	else if(m_level_count == 3){
 		m_current_level = new Level3();
 	}
+	
 
 	if (m_current_level) {
 		m_current_level->init();
