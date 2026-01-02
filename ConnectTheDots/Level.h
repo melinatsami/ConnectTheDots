@@ -9,6 +9,11 @@ class Level :public GameObject
 protected:
 	graphics::Brush m_brush;
 
+	int m_selected_dot; 
+	int m_hover_dot; //last selected dot
+	float m_mouse_x = 0.0f; //temporary edge
+	float m_mouse_y = 0.0f;
+
 	const float dot_radius = 15.0f;
 	struct Edge {
 		int from;

@@ -15,7 +15,7 @@ void Level1:: init(){
                 Dot d;
                 d.x = offsetX + (j * spacing);
                 d.y = offsetY + (i * spacing);
-                if ((i == j) || (i==0) || (i==4)){
+                if ((j == 4) || (i==0) || (i==4)){
                     d.graph_id = 0;
                 }
                 else {

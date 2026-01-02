@@ -2,20 +2,61 @@
 #include "GlobalState.h"
 void Level::update(float dt)
 {
+	bool completed = false;
 	graphics::MouseState mouse;
 	graphics::getMouseState(mouse);
 	int mx = mouse.cur_pos_x;
 	int my = mouse.cur_pos_y;
-	if (mouse.button_left_pressed) {
+	if (mouse.button_left_pressed) { //check if dot was selected. if yes, mark it as first node
+		m_selected_dot = -1; 
+		for (int i = 0; i < m_dots.size(); i++)
+		{
+			float dx = mx - m_dots[i].x; //distance between mouse and dot 
+			float dy = my - m_dots[i].y;
+
+			if (dx * dx + dy * dy <= dot_radius * dot_radius)
+			{
+				m_selected_dot = i; //save dots index 
+				break; //first dot found
+			}
+		}
+	}
+	if (mouse.button_left_down && m_selected_dot != -1) { 
+		m_mouse_x = mx;
+		m_mouse_y = my; //keep mouse location
 	}
 
-	if (mouse.button_left_down) {
+	if (mouse.button_left_released && m_selected_dot != -1){
+		m_hover_dot = -1;
 
-	}
+		for (int i = 0; i < m_dots.size(); i++) //check last selected dot
+		{
+			float dx = mx - m_dots[i].x;
+			float dy = my - m_dots[i].y;
 
-	if (mouse.button_left_released){
+			if (dx * dx + dy * dy <= dot_radius * dot_radius)
+			{
+				m_hover_dot = i;
+				break;
+			}
+		}
 
-	}
+		//if dot belongs in the same graph as previous, connect them
+		if (m_hover_dot != -1 && m_hover_dot != m_selected_dot &&
+			m_dots[m_hover_dot].graph_id == m_dots[m_selected_dot].graph_id)
+		{
+			Edge e;
+			e.from = m_selected_dot;
+			e.to = m_hover_dot;
+			m_edges.push_back(e);
+		}
+		m_selected_dot = -1; //reset
+		m_hover_dot = -1;
+		if (m_edges.size() == m_dots.size() + 1) {
+			completed = true;
+		}
+	} 
+	
 	GameObject::update(dt);
 }
 
