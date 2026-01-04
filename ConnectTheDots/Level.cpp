@@ -62,17 +62,32 @@ void Level::update(float dt)
 				bool connected = false; //checks if each dot is connected
 				for (auto& e : m_edges)
 				{
-					if (e.from == i || e.to == i)
+					int a = e.from;
+					int b = e.to;
+					if (m_dots[a].graph_id != m_dots[i].graph_id)
+					{
+						continue;
+					}
+					if (a == i || b == i) 
 					{
 						connected = true;
-						break; // this dot is connected
+						break;
 					}
 				}
-				if (!connected) {
-					printf("completed is false");
-					completed = false;
-					break; //dot isnt connected
+				for (int j = 0; j < m_dots.size(); j++)
+				{
+					if (i != j && m_dots[i].graph_id == m_dots[j].graph_id)
+					{
+						if (!connected)
+						{
+							completed = false;
+							break;
+						}
+					}
 				}
+
+				if (!completed)
+					break;
 			}
 		}
 	}

@@ -15,7 +15,7 @@ protected:
 	float m_mouse_y = 0.0f;
 	bool completed = false; //for each level
 
-	const float dot_radius = 15.0f;
+	const float dot_radius = 25.0f;
 	struct Edge {
 		int from;
 		int to;
