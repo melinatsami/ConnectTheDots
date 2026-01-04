@@ -11,6 +11,7 @@ private:
 	float m_canvas_height = 800.0f;
 
 	static GlobalState* m_unique_instance;
+	bool m_game_over = false;
 
 	GlobalState();
 
@@ -22,6 +23,8 @@ public:
 	void draw();
 	void update(float dt);
 	void nextLevel();
+	void setGameOver(bool state) {m_game_over = state;};
+	bool GameOver() { return m_game_over; };
 	static GlobalState* getInstance();
 	~GlobalState();
 

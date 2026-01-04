@@ -56,43 +56,24 @@ void Level::update(float dt)
 			completed = false;
 		}
 		else {
-			completed = true;
-			for (int i = 0; i < m_dots.size(); i++)
-			{
-				bool connected = false; //checks if each dot is connected
-				for (auto& e : m_edges)
-				{
-					int a = e.from;
-					int b = e.to;
-					if (m_dots[a].graph_id != m_dots[i].graph_id)
-					{
-						continue;
-					}
-					if (a == i || b == i) 
-					{
+			completed = true; 
+			for (int i = 0; i < m_dots.size(); i++) {
+				bool connected = false;
+				for (auto& e : m_edges) {
+					if (e.from == i || e.to == i) {
 						connected = true;
-						break;
+						break; 
 					}
 				}
-				for (int j = 0; j < m_dots.size(); j++)
-				{
-					if (i != j && m_dots[i].graph_id == m_dots[j].graph_id)
-					{
-						if (!connected)
-						{
-							completed = false;
-							break;
-						}
-					}
+				if (!connected) {
+					completed = false;
+					break; 
 				}
-
-				if (!completed)
-					break;
 			}
+			
 		}
 	}
 	if (completed) {
-		printf("ALL DOTS CONNECTED! Switching...\n");
 		GlobalState::getInstance()->nextLevel();
 		return;
 	}
@@ -134,6 +115,28 @@ void Level::draw()
 
 		m_brush.fill_opacity = 1.0f;
 		graphics::drawDisk(d.x, d.y, dot_radius, m_brush);
+	}
+
+	//draw Congratulations
+	if (GlobalState::getInstance()->GameOver()) {
+		//black background
+		m_brush.outline_opacity = 0.0f;
+		m_brush.fill_color[0] = 0.0f;
+		m_brush.fill_color[1] = 0.0f;
+		m_brush.fill_color[2] = 0.0f;
+		graphics::drawRect(GlobalState::getInstance()->getCanvasWidth() / 2,
+			GlobalState::getInstance()->getCanvasHeight() / 2, GlobalState::getInstance()->getCanvasWidth(), 
+			GlobalState::getInstance()->getCanvasHeight(), m_brush);
+
+		//white text
+		m_brush.outline_opacity = 1.0f;
+		m_brush.fill_color[0] = 1.0f;
+		m_brush.fill_color[1] = 1.0f;
+		m_brush.fill_color[2] = 1.0f;
+
+		graphics::drawText(GlobalState::getInstance()->getCanvasWidth() / 2 - 100, 
+			GlobalState::getInstance()->getCanvasHeight() / 2, 40.0f, "CONGRATULATIONS!", m_brush);
+		return;
 	}
 }
 

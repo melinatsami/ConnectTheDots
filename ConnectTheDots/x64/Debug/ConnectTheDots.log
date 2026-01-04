@@ -1,10 +1,9 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   GlobalState.cpp
   Level.cpp
-C:\Users\melin\Documents\GitHub\ConnectTheDots\ConnectTheDots\Level.cpp(24,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\melin\Documents\GitHub\ConnectTheDots\ConnectTheDots\Level.cpp(25,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Level1.cpp
+C:\Users\melin\OneDrive\Documents\GitHub\ConnectTheDots\ConnectTheDots\Level.cpp(24,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\melin\OneDrive\Documents\GitHub\ConnectTheDots\ConnectTheDots\Level.cpp(25,15): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Level2.cpp
   Level3.cpp
   Generating Code...
-  ConnectTheDots.vcxproj -> C:\Users\melin\Documents\GitHub\ConnectTheDots\bin\ConnectTheDots.exe
+  ConnectTheDots.vcxproj -> C:\Users\melin\OneDrive\Documents\GitHub\ConnectTheDots\bin\ConnectTheDots.exe

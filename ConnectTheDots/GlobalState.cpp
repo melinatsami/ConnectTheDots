@@ -52,13 +52,15 @@ void GlobalState::nextLevel() {
 	else if(m_level_count == 3){
 		m_current_level = new Level3();
 	}
+	else {
+		GlobalState::getInstance()->setGameOver(true);
+	}
 	
 
 	if (m_current_level) {
 		m_current_level->init();
 	}
 }
-
 GlobalState* GlobalState::getInstance()
 {
 	if (m_unique_instance == nullptr)
