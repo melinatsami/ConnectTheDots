@@ -21,13 +21,13 @@ void Level2::init() {
             d.x = offsetX + (j * spacing);
             d.y = offsetY + (i * spacing);
             if ( i == 0 && j <= 2 || i<4 && j == 2) {
-                d.graph_id = 0;
+                d.graph_id = 0; //red
             }
             else if (i < 4 && j>2) {
-                d.graph_id = 1;
+                d.graph_id = 2; //blue
             }
             else {
-                d.graph_id = 2;
+                d.graph_id = 1; //green
             }
             
             m_dots.push_back(d);

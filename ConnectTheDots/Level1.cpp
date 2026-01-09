@@ -21,10 +21,10 @@ void Level1:: init(){
                 d.x = offsetX + (j * spacing);
                 d.y = offsetY + (i * spacing);
                 if ((j == 2) || (i==0) || (i==2)){
-                    d.graph_id = 0;
+                    d.graph_id = 0; //red
                 }
                 else {
-                    d.graph_id = 2;
+                    d.graph_id = 2; //blue
                 }
                 m_dots.push_back(d);
 

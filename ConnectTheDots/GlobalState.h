@@ -2,6 +2,7 @@
 #include <string>
 #include <sgg/graphics.h>
 
+
 class GlobalState
 {
 private:

@@ -39,10 +39,18 @@ void Level::update(float dt)
 				break;
 			}
 		}
-
+		 //checks if dot already has an edge or is the first or last dot
+			bool hasEdge = false;
+			for (auto& e : m_edges) {
+				if (e.from == m_selected_dot) {
+					hasEdge = true;
+					break;
+				}
+			}
+	
 		//if dot belongs in the same graph as previous, connect them
 		if (m_hover_dot != -1 && m_hover_dot != m_selected_dot &&
-			m_dots[m_hover_dot].graph_id == m_dots[m_selected_dot].graph_id)
+			m_dots[m_hover_dot].graph_id == m_dots[m_selected_dot].graph_id && !hasEdge)
 		{
 			Edge e;
 			e.from = m_selected_dot;
@@ -117,27 +125,6 @@ void Level::draw()
 		graphics::drawDisk(d.x, d.y, dot_radius, m_brush);
 	}
 
-	//draw Congratulations
-	if (GlobalState::getInstance()->GameOver()) {
-		//black background
-		m_brush.outline_opacity = 0.0f;
-		m_brush.fill_color[0] = 0.0f;
-		m_brush.fill_color[1] = 0.0f;
-		m_brush.fill_color[2] = 0.0f;
-		graphics::drawRect(GlobalState::getInstance()->getCanvasWidth() / 2,
-			GlobalState::getInstance()->getCanvasHeight() / 2, GlobalState::getInstance()->getCanvasWidth(), 
-			GlobalState::getInstance()->getCanvasHeight(), m_brush);
-
-		//white text
-		m_brush.outline_opacity = 1.0f;
-		m_brush.fill_color[0] = 1.0f;
-		m_brush.fill_color[1] = 1.0f;
-		m_brush.fill_color[2] = 1.0f;
-
-		graphics::drawText(GlobalState::getInstance()->getCanvasWidth() / 2 - 100, 
-			GlobalState::getInstance()->getCanvasHeight() / 2, 40.0f, "CONGRATULATIONS!", m_brush);
-		return;
-	}
 }
 
 Level::Level(const std::string& name)

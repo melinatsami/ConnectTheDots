@@ -16,10 +16,35 @@ void GlobalState::init()
 	m_current_level->init();
 
 	graphics::preloadBitmaps(getAssetDir());
+	graphics::setFont(getAssetDir() + "GravitasOne-Regular.ttf");
 }
 
 void GlobalState::draw()
 {
+	graphics::Brush m_brush;
+	//draw Congratulations
+	if (GameOver()) {
+		//black background
+		m_brush.outline_opacity = 0.0f;
+		m_brush.fill_opacity = 1.0f;
+		m_brush.fill_color[0] = 0.0f;
+		m_brush.fill_color[1] = 0.0f;
+		m_brush.fill_color[2] = 0.0f;
+		graphics::drawRect(GlobalState::getInstance()->getCanvasWidth() / 2,
+			GlobalState::getInstance()->getCanvasHeight() / 2, GlobalState::getInstance()->getCanvasWidth(),
+			GlobalState::getInstance()->getCanvasHeight(), m_brush);
+
+		//white text
+		m_brush.outline_opacity = 1.0f;
+		m_brush.fill_opacity = 1.0f;
+		m_brush.fill_color[0] = 1.0f;
+		m_brush.fill_color[1] = 1.0f;
+		m_brush.fill_color[2] = 1.0f;
+
+		graphics::drawText(GlobalState::getInstance()->getCanvasWidth() / 5,
+			GlobalState::getInstance()->getCanvasHeight() / 2, 40.0f, "CONGRATULATIONS!", m_brush);
+		return;
+	}
 	if (!m_current_level)
 		return;
 	m_current_level->draw();
